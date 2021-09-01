@@ -367,6 +367,7 @@ RCT_EXPORT_METHOD(getPhotos:(NSDictionary *)params
                                                   ? @"audio"
                                                   : @"unknown")));
       CLLocation *const loc = asset.location;
+      NSString *const origFilename = [asset valueForKey:@"filename"];
 
       [assets addObject:@{
         @"node": @{
